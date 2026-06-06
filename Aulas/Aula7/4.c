@@ -30,6 +30,7 @@ int potencia(int base, int exp) {
 }
 
 int main() {
+    
     int opcao;
     do {
         imprimirMenu();
