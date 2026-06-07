@@ -1,5 +1,5 @@
 #include <stdio.h>
-gdsd
+
 void imprimirMenu() {
     printf("\n=== CALCULADORA ===\n");
     printf("1. Calcular média de 3 notas\n");
