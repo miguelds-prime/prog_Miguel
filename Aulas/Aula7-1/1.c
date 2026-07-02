@@ -19,13 +19,14 @@ void lerProdutos(Produto est[], int n) {
     }
 }
 
-void calcularEstoque(Produto est[], int n) {
+void cEstoque(Produto est[], int n) {
     for (int i = 0; i < n; i++) {
-        est[i].totalEstoque = est[i].preco * est[i].quantidade;
+        est[i].totalEstoque =
+        [i].preco * est[i].quantidade;
     }
 }
 
-void imprimirEstoque(Produto est[], int n) {
+void iEstoque(Produto est[], int n) {
     float totalGeral = 0;
     printf("\n%-20s | %8s | %8s | %12s\n", "Produto", "Preço", "Qtd", "Total Estoque");
     printf("-------------------------------------------------------------\n");
@@ -38,7 +39,7 @@ void imprimirEstoque(Produto est[], int n) {
     printf("Total Geral: R$ %.2f\n", totalGeral);
 }
 
-int encontrarMaiorEstoque(Produto est[], int n) {
+int MaiorEstoque(Produto est[], int n) {
     int iMaior = 0;
     for (int i = 1; i < n; i++) {
         if (est[i].totalEstoque > est[iMaior].totalEstoque) iMaior = i;
@@ -48,7 +49,7 @@ int encontrarMaiorEstoque(Produto est[], int n) {
 
 }
 
-int encontrarMenorPreco(Produto est[], int n) {
+int MenorPreco(Produto est[], int n) {
     int iMenor = 0;
     for (int i = 1; i < n; i++) {
         if (est[i].preco < est[iMenor].preco) iMenor = i;
@@ -65,8 +66,8 @@ int main() {
     lerProdutos(est, n);
     calcularEstoque(est, n);
     imprimirEstoque(est, n);
-    int maior = encontrarMaiorEstoque(est, n);
-    int menor = encontrarMenorPreco(est, n);
+    int maior = MaiorEstoque(est, n);
+    int menor = MenorPreco(est, n);
 
     printf("\nMaior estoque: %s (R$ %.2f)\n", est[maior].nome, est[maior].totalEstoque);
     printf("Menor preço: %s (R$ %.2f)\n", est[menor].nome, est[menor].preco);
